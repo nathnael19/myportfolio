@@ -96,8 +96,9 @@ export default function Hero() {
               Contact Me
             </a>
             <a
-              href="/resume.pdf"
+              href="/resmume.pdf"
               target="_blank"
+              download="Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <Download className="w-4 h-4" />
@@ -117,7 +118,7 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 border border-gray-200 dark:border-white/10 backdrop-blur-3xl" />
             <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-cyan-400/30 to-blue-500/30 border border-gray-300 dark:border-white/20 backdrop-blur-2xl flex items-center justify-center overflow-hidden">
               <img
-                src="/public/profile.jpg"
+                src="/profile.jpg"
                 alt="Developer Avatar"
                 className="w-full h-full object-cover mix-blend-overlay opacity-80"
                 referrerPolicy="no-referrer"

@@ -86,7 +86,7 @@ export default function About() {
               </h3>
               <p className="text-gray-600 dark:text-gray-500">
                 Designing robust APIs and scalable database structures using
-                Node.js, Python, and SQL/NoSQL databases.
+                FastAPI, Node.js, Python, and SQL/NoSQL databases.
               </p>
             </div>
           </motion.div>

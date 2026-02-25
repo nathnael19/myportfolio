@@ -91,7 +91,7 @@ export const portfolioData = {
       title: "GoalUp Admin",
       description:
         "A comprehensive admin dashboard for managing products, users, and orders in the GoalUp ecosystem. Features real-time inventory tracking, role-based access control, analytics insights, and seamless integration with the backend API.",
-      image: "https://picsum.photos/seed/ecommerce/800/600",
+      image: "/goalupadmin.png",
       tech: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
       github: "https://github.com/nathnael19/goalup_admin",
       live: "https://goalup.webcode.codes",
@@ -101,7 +101,7 @@ export const portfolioData = {
       title: "GoalUp Backend",
       description:
         "A scalable RESTful API built with FastAPI powering the GoalUp platform. Handles authentication (JWT), user management, product operations, and business logic using PostgreSQL and SQLModel.",
-      image: "https://picsum.photos/seed/task/800/600",
+      image: "/goalupbackend.png",
       tech: ["FastAPI", "Postgresql", "SQLModel", "JWT"],
       github: "https://github.com/nathnael19/goalup_backend",
       live: "https://goalupbackend.webcode.codes",
@@ -121,7 +121,7 @@ export const portfolioData = {
       title: "Expense Tracker",
       description:
         "A personal finance tracking app built with Flutter. Supports offline-first data storage using Hive, expense categorization, analytics summaries, and a simple yet effective dashboard for monitoring spending habits.",
-      image: "https://picsum.photos/seed/crypto/800/600",
+      image: "/expensetracker.jpg",
       tech: ["Flutter", "Hive", "Dart", "Firebase"],
       github: "https://github.com/nathnael19/expense-tracker",
       live: "https://example.com",
@@ -131,7 +131,7 @@ export const portfolioData = {
       title: "FM Radio",
       description:
         "A feature-rich FM radio streaming app with background playback support. Includes live radio streaming, podcast playback, news integration, and API-based weather and currency updates.",
-      image: "https://picsum.photos/seed/radio/800/600",
+      image: "/fmradio.png",
       tech: ["Flutter", "Dart", "Firebase", "AudioPlayers"],
       github: "https://github.com/nathnael19/fm_radio",
       live: "https://example.com",
@@ -141,7 +141,7 @@ export const portfolioData = {
       title: "Flappy Bird",
       description:
         "A 2D arcade-style game inspired by the classic Flappy Bird, developed using the Godot Engine. Built with GDScript, featuring collision detection, score tracking, and smooth physics-based movement.",
-      image: "https://picsum.photos/seed/game/800/600",
+      image: "/flappybird.png",
       tech: ["Godot", "GDScript", "Godot Engine"],
       github: "https://github.com/nathnael19/flappy-bird",
       live: "https://example.com",
@@ -151,7 +151,7 @@ export const portfolioData = {
       title: "Mezmur Debter",
       description:
         "A digital hymn book application designed for choir members. Supports offline access using Hive, song categorization, search functionality, favorites, and structured content display from Firebase.",
-      image: "https://picsum.photos/seed/music/800/600",
+      image: "/mezmurdebter.jpg",
       tech: ["Flutter", "Hive", "Dart", "Firebase"],
       github: "https://github.com/nathnael19/ruhama_choir_mezmur_debter",
       live: "https://example.com",
@@ -161,7 +161,7 @@ export const portfolioData = {
       title: "Arif Menu",
       description:
         "A modern digital restaurant menu platform built with Next.js and TypeScript. Features dynamic menu rendering, responsive UI design with Tailwind CSS, and structured content management for restaurants.",
-      image: "https://picsum.photos/seed/menu/800/600",
+      image: "/arifmenu.png",
       tech: ["Next.js", "TypeScript", "Tailwind"],
       github: "https://github.com/nathnael19/ArifMenu",
       live: "https://example.com",
@@ -181,7 +181,7 @@ export const portfolioData = {
       title: "SmartJob Frontend",
       description:
         "A responsive web interface for managing job applications and candidate evaluations. Built with Next.js and TypeScript, integrating seamlessly with the SmartJob backend API for real-time updates.",
-      image: "https://picsum.photos/seed/frontend/800/600",
+      image: "/smartjobfrontend.png",
       tech: ["Next.js", "TypeScript", "Tailwind"],
       github: "https://github.com/ASTU-group/smartjob_frontend",
       live: "https://smartjob.webcode.codes",
