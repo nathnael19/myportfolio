@@ -36,10 +36,6 @@ export default function Chatbot() {
     // Create chat session on mount
     const initChat = async () => {
       try {
-        // Debug: List models to console
-        const models = await ai.models.list();
-        console.log("Available Gemini Models:", models);
-
         const systemInstruction = `You are a helpful AI assistant representing ${portfolioData.personal.name}. 
 Here is their portfolio data:
 ${JSON.stringify(portfolioData, null, 2)}
