@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { portfolioData } from "../data/portfolio";
 import { useEffect, useState } from "react";
@@ -96,7 +96,7 @@ export default function Hero() {
               Contact Me
             </a>
             <a
-              href="/resmume.pdf"
+              href="/resume.pdf"
               target="_blank"
               download="Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"

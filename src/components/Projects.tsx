@@ -78,7 +78,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {visibleProjects.map((project, idx) => (
+            {visibleProjects.map((project) => (
               <motion.div
                 layout
                 key={project.id}
