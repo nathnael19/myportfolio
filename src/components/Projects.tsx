@@ -1,10 +1,12 @@
 import { motion, AnimatePresence } from "motion/react";
 import { portfolioData } from "../data/portfolio";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { useState, useMemo } from "react";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
+  const [showAll, setShowAll] = useState(false);
+  const INITIAL_VISIBLE_COUNT = 6;
 
   const allTechs = useMemo(() => {
     const techs = new Set<string>();
@@ -15,11 +17,17 @@ export default function Projects() {
   }, []);
 
   const filteredProjects = useMemo(() => {
-    if (filter === "All") return portfolioData.projects;
-    return portfolioData.projects.filter((project) =>
-      project.tech.includes(filter),
-    );
+    let projects = portfolioData.projects;
+    if (filter !== "All") {
+      projects = projects.filter((project) => project.tech.includes(filter));
+    }
+    return projects;
   }, [filter]);
+
+  const visibleProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, INITIAL_VISIBLE_COUNT);
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -50,7 +58,10 @@ export default function Projects() {
           {allTechs.map((tech) => (
             <button
               key={tech}
-              onClick={() => setFilter(tech)}
+              onClick={() => {
+                setFilter(tech);
+                setShowAll(false);
+              }}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 filter === tech
                   ? "bg-cyan-500 text-white shadow-md shadow-cyan-500/25"
@@ -67,7 +78,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, idx) => (
+            {visibleProjects.map((project, idx) => (
               <motion.div
                 layout
                 key={project.id}
@@ -131,6 +142,29 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Show More/Less Button */}
+        {filteredProjects.length > INITIAL_VISIBLE_COUNT && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-12"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-semibold hover:bg-cyan-500 hover:text-white hover:border-cyan-500 dark:hover:bg-cyan-500 dark:hover:border-cyan-500 transition-all duration-300 shadow-sm hover:shadow-cyan-500/25"
+            >
+              {showAll ? "Show Less" : "Show More Projects"}
+              <motion.div
+                animate={{ rotate: showAll ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ArrowRight className="w-4 h-4 rotate-90" />
+              </motion.div>
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
