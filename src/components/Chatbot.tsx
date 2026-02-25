@@ -46,7 +46,7 @@ ${JSON.stringify(portfolioData, null, 2)}
 Answer questions about their skills, experience, and projects based on this data. Be polite, professional, and concise. Do not make up information not present in the data.`;
 
         const chat = ai.chats.create({
-          model: "gemini-2.5-flash",
+          model: "gemini-2.0-flash",
           config: {
             systemInstruction,
           },
@@ -122,7 +122,7 @@ Answer questions about their skills, experience, and projects based on this data
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-6 right-6 w-[350px] sm:w-[400px] h-[500px] max-h-[80vh] bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-[calc(100vw-2rem)] sm:w-[400px] h-[500px] max-h-[80vh] bg-white dark:bg-[#0f0f0f] border border-gray-200 dark:border-white/10 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="p-4 border-b border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/[0.02] flex items-center justify-between">
