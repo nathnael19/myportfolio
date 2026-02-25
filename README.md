@@ -1,9 +1,6 @@
 # 🚀 Modern Developer Portfolio
 
 A sleek, premium personal portfolio website built with modern web technologies. This project features a high-performance architecture, stunning animations, and an integrated AI assistant.
-
-![Portfolio Preview](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
-
 ## ✨ Features
 
 - **🤖 AI Chatbot Assistant**: Integrated Google Gemini AI to answer questions about skills, experience, and projects in real-time.
