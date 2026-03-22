@@ -27,40 +27,43 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
+      className={`fixed top-4 left-4 right-4 z-50 transition-all duration-500 rounded-2xl ${
         isScrolled
-          ? "bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md border-b border-gray-200 dark:border-white/5 py-3"
+          ? "glass-card py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tighter">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+        <a href="#" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+            {portfolioData.personal.name[0]}
+          </div>
+          <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
             {portfolioData.personal.name.split(" ")[0]}
+            <span className="text-cyan-500">.</span>
           </span>
-          .dev
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6 text-sm font-medium text-gray-600 dark:text-gray-300">
+          <ul className="flex items-center gap-1 text-sm font-medium">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200"
+                  className="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-gray-100 dark:hover:bg-white/5 transition-all duration-200"
                 >
                   {link.name}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-4 border-l border-gray-200 dark:border-white/10 pl-6">
+          <div className="flex items-center gap-2 border-l border-gray-200 dark:border-white/10 pl-6">
             <a
               href={portfolioData.personal.socials.github}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -68,13 +71,13 @@ export default function Navbar() {
               href={portfolioData.personal.socials.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <button
               onClick={toggleTheme}
-              className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors ml-2"
+              className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all ml-2"
             >
               {theme === "dark" ? (
                 <Sun className="w-5 h-5" />
@@ -126,9 +129,9 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[280px] bg-white dark:bg-[#0a0a0a] border-l border-gray-200 dark:border-white/5 z-50 md:hidden flex flex-col shadow-2xl"
+              className="fixed top-0 right-0 h-full w-[280px] bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-l border-gray-200 dark:border-white/10 z-50 md:hidden flex flex-col shadow-2xl"
             >
-              <div className="p-6 flex items-center justify-between border-b border-gray-200 dark:border-white/5">
+              <div className="p-6 flex items-center justify-between border-b border-gray-200 dark:border-white/10">
                 <span className="font-bold text-lg dark:text-white">Menu</span>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -139,13 +142,13 @@ export default function Navbar() {
               </div>
 
               <nav className="flex-1 overflow-y-auto p-6">
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   {navLinks.map((link) => (
                     <li key={link.name}>
                       <a
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 block transition-colors"
+                        className="text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 block px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-white/5 transition-all"
                       >
                         {link.name}
                       </a>
@@ -154,12 +157,12 @@ export default function Navbar() {
                 </ul>
 
                 <div className="mt-8 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-col gap-6">
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-4 px-4">
                     <a
                       href={portfolioData.personal.socials.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      className="p-3 rounded-xl bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all"
                     >
                       <Github className="w-6 h-6" />
                     </a>
@@ -167,7 +170,7 @@ export default function Navbar() {
                       href={portfolioData.personal.socials.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      className="p-3 rounded-xl bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-all"
                     >
                       <Linkedin className="w-6 h-6" />
                     </a>
@@ -178,15 +181,17 @@ export default function Navbar() {
                       toggleTheme();
                       setIsMobileMenuOpen(false);
                     }}
-                    className="flex items-center gap-3 text-gray-600 dark:text-gray-300 font-medium"
+                    className="flex items-center gap-3 w-full px-4 py-4 rounded-xl bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-200 dark:hover:bg-white/10 transition-all text-left"
                   >
                     {theme === "dark" ? (
                       <>
-                        <Sun className="w-5 h-5" /> Light Mode
+                        <Sun className="w-5 h-5 text-yellow-500" /> 
+                        <span>Light Mode</span>
                       </>
                     ) : (
                       <>
-                        <Moon className="w-5 h-5" /> Dark Mode
+                        <Moon className="w-5 h-5 text-blue-500" />
+                        <span>Dark Mode</span>
                       </>
                     )}
                   </button>
