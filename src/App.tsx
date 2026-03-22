@@ -23,10 +23,10 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-[#0a0a0a] dark:text-gray-100 selection:bg-cyan-500/30 font-sans transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-[#030712] text-gray-900 dark:text-gray-100 selection:bg-cyan-500 selection:text-white font-sans transition-colors duration-500 overflow-x-hidden">
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 bg-[length:200%_auto] animate-gradient-x origin-left z-[100]"
         style={{ scaleX }}
       />
 
