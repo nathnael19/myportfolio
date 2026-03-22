@@ -4,91 +4,99 @@ import { Code2, Terminal, Cpu } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col gap-4 mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-            About{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              Me
-            </span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-lg"
+            transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <p>{portfolioData.personal.about}</p>
-            <p>
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or writing technical
-              articles to share my knowledge with the community.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-gray-900 dark:text-white">
-                  5+
-                </div>
-                <div className="text-sm text-gray-500 uppercase tracking-wider font-medium">
-                  Years Experience
-                </div>
+            <div className="relative z-10 space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500">
+                  Discovery
+                </h2>
+                <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
+                  Crafting Digital Experiences with{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                    Precision
+                  </span>
+                </h3>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl font-bold text-gray-900 dark:text-white">
-                  50+
+              
+              <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+                {portfolioData.personal.about}
+              </p>
+
+              <div className="grid grid-cols-2 gap-8 pt-4">
+                <div className="space-y-1">
+                  <div className="text-5xl font-black text-gray-900 dark:text-white tracking-tighter">
+                    5<span className="text-cyan-500">+</span>
+                  </div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                    Years of Expertise
+                  </div>
                 </div>
-                <div className="text-sm text-gray-500 uppercase tracking-wider font-medium">
-                  Projects Completed
+                <div className="space-y-1">
+                  <div className="text-5xl font-black text-gray-900 dark:text-white tracking-tighter">
+                    50<span className="text-blue-500">+</span>
+                  </div>
+                  <div className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                    Digital Products
+                  </div>
                 </div>
               </div>
             </div>
+            
+            {/* Decorative element */}
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl -z-10" />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="grid gap-6"
           >
-            <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
-              <div className="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-500/10 flex items-center justify-center mb-4 text-cyan-600 dark:text-cyan-400">
-                <Code2 className="w-6 h-6" />
+            {[
+              {
+                title: "Frontend Architecture",
+                desc: "Creating pixel-perfect, accessible, and performant user interfaces using React and the modern web ecosystem.",
+                icon: Code2,
+                color: "cyan"
+              },
+              {
+                title: "Scalable Systems",
+                desc: "Designing robust backend structures and distributed systems that power modern digital experiences.",
+                icon: Terminal,
+                color: "blue"
+              },
+              {
+                title: "Product Strategy",
+                desc: "Merging technical excellence with business goals to build products that deliver real-world impact.",
+                icon: Cpu,
+                color: "indigo"
+              }
+            ].map((service, index) => (
+              <div 
+                key={index}
+                className="group p-8 rounded-[2rem] glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+              >
+                <div className={`w-14 h-14 rounded-2xl bg-${service.color}-500/10 flex items-center justify-center mb-6 text-${service.color}-500 group-hover:scale-110 transition-transform duration-500`}>
+                  <service.icon className="w-7 h-7" />
+                </div>
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">
+                  {service.title}
+                </h4>
+                <p className="text-lg text-gray-600 dark:text-gray-500 leading-relaxed">
+                  {service.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Frontend Development
-              </h3>
-              <p className="text-gray-600 dark:text-gray-500">
-                Creating responsive, accessible, and performant user interfaces
-                using React, Next.js, and modern CSS.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center mb-4 text-blue-600 dark:text-blue-400">
-                <Terminal className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Backend Architecture
-              </h3>
-              <p className="text-gray-600 dark:text-gray-500">
-                Designing robust APIs and scalable database structures using
-                FastAPI, Node.js, Python, and SQL/NoSQL databases.
-              </p>
-            </div>
+            ))}
           </motion.div>
         </div>
       </div>
