@@ -29,22 +29,24 @@ export default function Projects() {
     : filteredProjects.slice(0, INITIAL_VISIBLE_COUNT);
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-32 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col gap-4 mb-12"
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-4 mb-20 items-center text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500 mb-2">
+            Showcase
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
             Featured{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
               Projects
             </span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
+          </h3>
         </motion.div>
 
         {/* Filter Buttons */}
@@ -52,8 +54,8 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-3 mb-12"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-3 mb-16"
         >
           {allTechs.map((tech) => (
             <button
@@ -62,10 +64,10 @@ export default function Projects() {
                 setFilter(tech);
                 setShowAll(false);
               }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-2xl text-sm font-bold transition-all duration-300 ${
                 filter === tech
-                  ? "bg-cyan-500 text-white shadow-md shadow-cyan-500/25"
-                  : "bg-gray-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white"
+                  ? "bg-cyan-500 text-white shadow-xl shadow-cyan-500/20"
+                  : "glass-card text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white"
               }`}
             >
               {tech}
@@ -75,66 +77,79 @@ export default function Projects() {
 
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
         >
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project) => (
               <motion.div
                 layout
                 key={project.id}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
-                className="group relative rounded-3xl overflow-hidden bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 hover:border-cyan-500/30 dark:hover:border-cyan-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 shadow-sm dark:shadow-none"
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, ease: "circOut" }}
+                className="group relative rounded-[2.5rem] overflow-hidden glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-700 hover:-translate-y-3 shadow-2xl"
               >
-                <div className="aspect-video overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0a0a0a] via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="aspect-[16/10] overflow-hidden relative">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000 ease-out"
                     referrerPolicy="no-referrer"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                  
+                  {/* Floating Link Icons on Hover */}
+                  <div className="absolute top-6 right-6 flex flex-col gap-3 translate-x-12 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-3 rounded-2xl glass-card text-white hover:bg-white/20 transition-all"
+                      title="View Source"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-3 rounded-2xl glass-card text-white hover:bg-white/20 transition-all"
+                      title="Live Demo"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
 
-                <div className="p-8 relative z-20 -mt-12">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-8">
+                <div className="p-10 relative">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 rounded-md bg-gray-100 dark:bg-white/5 text-xs font-medium text-cyan-600 dark:text-cyan-300"
+                        className="px-4 py-1.5 rounded-xl bg-cyan-500/10 text-[10px] font-black uppercase tracking-widest text-cyan-500"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-white/10">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight group-hover:text-cyan-500 transition-colors duration-500">
+                    {project.title}
+                  </h3>
+                  <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 line-clamp-2 font-medium">
+                    {project.description}
+                  </p>
+
+                  <div className="flex items-center gap-4 pt-6 border-t border-gray-200 dark:border-white/10">
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors ml-auto"
+                      className="group/btn inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-cyan-500 hover:text-cyan-400 transition-all"
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
+                      View Project
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform" />
                     </a>
                   </div>
                 </div>
@@ -149,23 +164,26 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex justify-center mt-12"
+            className="flex justify-center mt-20"
           >
             <button
               onClick={() => setShowAll(!showAll)}
-              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-semibold hover:bg-cyan-500 hover:text-white hover:border-cyan-500 dark:hover:bg-cyan-500 dark:hover:border-cyan-500 transition-all duration-300 shadow-sm hover:shadow-cyan-500/25"
+              className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-[2rem] glass-card text-gray-900 dark:text-white font-black uppercase tracking-widest text-xs hover:bg-cyan-500 hover:text-white hover:border-cyan-500 dark:hover:bg-cyan-500 dark:hover:border-cyan-500 transition-all duration-500 shadow-2xl"
             >
-              {showAll ? "Show Less" : "Show More Projects"}
+              {showAll ? "Show Less" : "Explore More"}
               <motion.div
                 animate={{ rotate: showAll ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.5 }}
               >
-                <ArrowRight className="w-4 h-4 rotate-90" />
+                <ArrowRight className="w-4 h-4" />
               </motion.div>
             </button>
           </motion.div>
         )}
       </div>
+
+      {/* Decorative Background Element */}
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px] -z-10" />
     </section>
   );
 }
