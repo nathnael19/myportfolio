@@ -49,7 +49,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="lg:col-span-7 flex flex-col items-start gap-8"
         >
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -87,9 +87,9 @@ export default function Hero() {
           </div>
 
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed font-medium">
-            {portfolioData.personal.tagline}. Specialized in building 
-            <span className="text-gray-900 dark:text-white mx-1">high-performance</span> 
-            web applications with a focus on 
+            {portfolioData.personal.tagline}. Specialized in building
+            <span className="text-gray-900 dark:text-white mx-1">high-performance</span>
+            web applications with a focus on
             <span className="text-gray-900 dark:text-white mx-1">premium user experience</span>.
           </p>
 
