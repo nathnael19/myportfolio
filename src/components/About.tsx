@@ -26,7 +26,7 @@ export default function About() {
                   </span>
                 </h3>
               </div>
-              
+
               <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
                 {portfolioData.personal.about}
               </p>
@@ -50,7 +50,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative element */}
             <div className="absolute -top-20 -left-20 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl -z-10" />
           </motion.div>
@@ -82,7 +82,7 @@ export default function About() {
                 color: "indigo"
               }
             ].map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="group p-8 rounded-[2rem] glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
               >
