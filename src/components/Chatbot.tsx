@@ -101,11 +101,10 @@ Answer questions about their skills, experience, and projects based on this data
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-8 right-8 p-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all duration-500 z-50 group ${
-          isOpen
+        className={`fixed bottom-8 right-8 p-5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all duration-500 z-50 group ${isOpen
             ? "scale-0 opacity-0 pointer-events-none"
             : "scale-100 opacity-100"
-        }`}
+          }`}
       >
         <MessageSquare className="w-7 h-7 group-hover:rotate-12 transition-transform" />
         <div className="absolute -top-1 -right-1 w-4 h-4 bg-cyan-500 rounded-full border-4 border-white dark:border-slate-900 animate-pulse" />
@@ -152,11 +151,10 @@ Answer questions about their skills, experience, and projects based on this data
                   className={`flex gap-4 ${msg.role === "user" ? "flex-row-reverse" : ""}`}
                 >
                   <div
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm ${
-                      msg.role === "user"
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-sm ${msg.role === "user"
                         ? "bg-slate-900 dark:bg-white text-white dark:text-slate-900"
                         : "bg-cyan-500 text-white"
-                    }`}
+                      }`}
                   >
                     {msg.role === "user" ? (
                       <User className="w-4 h-4" />
@@ -165,11 +163,10 @@ Answer questions about their skills, experience, and projects based on this data
                     )}
                   </div>
                   <div
-                    className={`max-w-[80%] p-5 rounded-3xl text-sm font-medium leading-relaxed shadow-lg ${
-                      msg.role === "user"
+                    className={`max-w-[80%] p-5 rounded-3xl text-sm font-medium leading-relaxed shadow-lg ${msg.role === "user"
                         ? "bg-slate-800 text-white rounded-tr-none"
                         : "glass-card text-gray-800 dark:text-gray-200 rounded-tl-none border-white/10"
-                    }`}
+                      }`}
                   >
                     {msg.text}
                   </div>
