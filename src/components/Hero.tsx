@@ -66,7 +66,7 @@ export default function Hero() {
             <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-400 tracking-tight">
               Hello there, I'm
             </h2>
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-gray-900 dark:text-white leading-[0.9]">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-gray-900 dark:text-white leading-[0.9]">
               {portfolioData.personal.name.split(" ")[0]} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600">
                 {portfolioData.personal.name.split(" ").slice(1).join(" ")}
@@ -145,7 +145,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-              className="absolute -top-10 -right-6 px-6 py-4 glass-card rounded-3xl shadow-2xl flex flex-col items-center"
+              className="absolute -top-6 -right-4 sm:-top-10 sm:-right-6 px-4 py-2 sm:px-6 sm:py-4 glass-card rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col items-center z-20"
             >
               <span className="text-3xl font-bold text-cyan-500">5+</span>
               <span className="text-[10px] uppercase tracking-widest font-black text-gray-500 dark:text-gray-400">Years Exp.</span>
@@ -155,7 +155,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 15, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-10 -left-6 p-5 glass-card rounded-3xl shadow-2xl flex items-center gap-3"
+              className="absolute -bottom-6 -left-4 sm:-bottom-10 sm:-left-6 p-4 sm:p-5 glass-card rounded-2xl sm:rounded-3xl shadow-2xl flex items-center gap-2 sm:gap-3 z-20"
             >
               <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
                 <span className="text-blue-500 font-bold">R</span>

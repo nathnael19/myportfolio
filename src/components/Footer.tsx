@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col items-center md:items-end gap-6">
-            <div className="flex items-center gap-8">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
               {['About', 'Projects', 'Skills', 'Experience'].map((item) => (
                 <a 
                   key={item}

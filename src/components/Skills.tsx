@@ -34,7 +34,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.1 }}
-              className="group p-10 rounded-[2.5rem] glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+              className="group p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-8">
                 <h4 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight group-hover:text-cyan-500 transition-colors">
