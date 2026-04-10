@@ -94,21 +94,21 @@ export default function Contact() {
                 color: "blue"
               }
             ].map((item, idx) => (
-              <div key={idx} className="group p-8 rounded-[2.5rem] glass-card flex items-center gap-8 hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-500">
-                <div className={`w-16 h-16 rounded-2xl bg-${item.color}-500/10 flex items-center justify-center text-${item.color}-500 shrink-0 group-hover:scale-110 transition-transform duration-500`}>
-                  <item.icon className="w-8 h-8" />
+              <div key={idx} className="group p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] glass-card flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-500">
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-${item.color}-500/10 flex items-center justify-center text-${item.color}-500 shrink-0 group-hover:scale-110 transition-transform duration-500`}>
+                  <item.icon className="w-6 h-6 sm:w-8 sm:h-8" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h4 className="text-sm font-black uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-1">
                     {item.title}
                   </h4>
                   {item.link ? (
-                    <a href={item.link} className="text-2xl font-bold text-gray-900 dark:text-white hover:text-cyan-500 transition-colors">
+                    <a href={item.link} className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-cyan-500 transition-colors break-words block">
                       {item.value}
                     </a>
                   ) : (
-                    <div>
-                      <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                    <div className="min-w-0">
+                      <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white break-words">
                         {item.value}
                       </div>
                       {item.sub && <div className="text-sm font-medium text-gray-500">{item.sub}</div>}
@@ -119,10 +119,10 @@ export default function Contact() {
             ))}
 
             {/* Decorative Social Prompt */}
-            <div className="mt-auto p-10 rounded-[3rem] bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 shadow-2xl relative overflow-hidden group">
+            <div className="mt-auto p-8 sm:p-10 rounded-[2.5rem] sm:rounded-[3rem] bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 shadow-2xl relative overflow-hidden group">
               <div className="relative z-10">
-                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Let's build something great.</h4>
-                <p className="text-gray-600 dark:text-gray-400 font-medium">I'm currently available for freelance work and full-time positions.</p>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">Let's build something great.</h4>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium">I'm currently available for freelance work and full-time positions.</p>
               </div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000" />
             </div>
@@ -136,7 +136,7 @@ export default function Contact() {
           >
             <form
               onSubmit={handleSubmit}
-              className="h-full space-y-6 p-10 rounded-[3rem] glass-card shadow-2xl border-white/20"
+              className="h-full space-y-6 p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] glass-card shadow-2xl border-white/20"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
