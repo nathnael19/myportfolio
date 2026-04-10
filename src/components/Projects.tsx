@@ -78,7 +78,7 @@ export default function Projects() {
         <motion.div
           ref={sectionRef}
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 scroll-mt-32"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 scroll-mt-32"
         >
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project) => (
@@ -89,9 +89,9 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.5, ease: "circOut" }}
-                className="group relative rounded-[2.5rem] overflow-hidden glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-700 hover:-translate-y-3 shadow-2xl"
+                className="group relative rounded-[2rem] overflow-hidden glass-card hover:bg-white/10 dark:hover:bg-white/10 transition-all duration-700 hover:-translate-y-3 shadow-2xl"
               >
-                <div className="aspect-[16/10] overflow-hidden relative">
+                <div className="aspect-video overflow-hidden relative">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -123,7 +123,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="p-10 relative">
+                <div className="p-8 relative">
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
                       <span
@@ -135,10 +135,10 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight group-hover:text-cyan-500 transition-colors duration-500">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight group-hover:text-cyan-500 transition-colors duration-500">
                     {project.title}
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 line-clamp-2 font-medium">
+                  <p className="text-base text-gray-600 dark:text-gray-400 mb-6 line-clamp-2 font-medium">
                     {project.description}
                   </p>
 
