@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from "motion/react";
 import { portfolioData } from "../data/portfolio";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
   const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const INITIAL_VISIBLE_COUNT = 6;
 
   const allTechs = useMemo(() => {
@@ -75,8 +76,9 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
+          ref={sectionRef}
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 scroll-mt-32"
         >
           <AnimatePresence mode="popLayout">
             {visibleProjects.map((project) => (
@@ -166,7 +168,12 @@ export default function Projects() {
             className="flex justify-center mt-20"
           >
             <button
-              onClick={() => setShowAll(!showAll)}
+              onClick={() => {
+                if (showAll) {
+                  sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+                }
+                setShowAll(!showAll);
+              }}
               className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-[2rem] glass-card text-gray-900 dark:text-white font-black uppercase tracking-widest text-xs hover:bg-cyan-500 hover:text-white hover:border-cyan-500 dark:hover:bg-cyan-500 dark:hover:border-cyan-500 transition-all duration-500 shadow-2xl"
             >
               {showAll ? "Show Less" : "Explore More"}
