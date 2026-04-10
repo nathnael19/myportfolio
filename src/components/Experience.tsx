@@ -17,12 +17,12 @@ export default function Experience() {
           className="flex flex-col gap-4 mb-20 items-center text-center"
         >
           <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500 mb-2">
-            Journey
+            Career
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
-            Work{" "}
+            Where I've{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-              Experience
+              Been
             </span>
           </h3>
         </motion.div>

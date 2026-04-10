@@ -59,12 +59,12 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            Available for new opportunities
+            Open for new projects
           </motion.div>
 
           <div className="space-y-4">
             <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-400 tracking-tight">
-              Hello there, I'm
+              Hey, I'm
             </h2>
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-gray-900 dark:text-white leading-[0.9]">
               {portfolioData.personal.name.split(" ")[0]} <br />
@@ -98,7 +98,7 @@ export default function Hero() {
               href="#projects"
               className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-black font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
             >
-              Explore My Work
+              See my work
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <div className="flex items-center gap-3">
@@ -161,7 +161,7 @@ export default function Hero() {
                 <span className="text-blue-500 font-bold">R</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold dark:text-white">React Expert</span>
+                <span className="text-sm font-bold dark:text-white">Love React</span>
                 <span className="text-[10px] text-gray-500">Frontend Focus</span>
               </div>
             </motion.div>

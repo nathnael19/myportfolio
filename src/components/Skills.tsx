@@ -16,12 +16,12 @@ export default function Skills() {
           className="flex flex-col gap-4 mb-20 items-center text-center"
         >
           <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500 mb-2">
-            Abilities
+            My Stack
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
-            Technical{" "}
+            Tools I use{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-              Proficiency
+              every day
             </span>
           </h3>
         </motion.div>
@@ -41,7 +41,7 @@ export default function Skills() {
                   {category.name}
                 </h4>
                 <div className="text-xs font-black text-cyan-500/50 uppercase tracking-widest bg-cyan-500/5 px-3 py-1 rounded-full">
-                  Skillset
+                  Focus
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">

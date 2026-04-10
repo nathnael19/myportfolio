@@ -56,17 +56,13 @@ export default function Contact() {
           className="flex flex-col gap-4 mb-20 items-center text-center"
         >
           <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500 mb-2">
-            Connection
+            Reach out
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
-            Get In{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-              Touch
-            </span>
+            Let's work together
           </h3>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mt-4 font-medium">
-            Have a project in mind or just want to say hi? I'm always open to 
-            discussing new projects and creative opportunities.
+            Got an idea for a project or just want to say hi? My inbox is always open.
           </p>
         </motion.div>
 
@@ -121,8 +117,8 @@ export default function Contact() {
             {/* Decorative Social Prompt */}
             <div className="mt-auto p-8 sm:p-10 rounded-[2.5rem] sm:rounded-[3rem] bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 shadow-2xl relative overflow-hidden group">
               <div className="relative z-10">
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">Let's build something great.</h4>
-                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium">I'm currently available for freelance work and full-time positions.</p>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2">Let's build something together.</h4>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-medium">I'm currently looking for new freelance projects and full-time opportunities.</p>
               </div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000" />
             </div>
@@ -200,10 +196,10 @@ export default function Contact() {
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin" />
                 ) : isSubmitted ? (
-                  "Inquiry Received!"
+                  "Message sent!"
                 ) : (
                   <>
-                    Initiate Project
+                    Send message
                     <Send className="w-4 h-4 translate-x-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </>
                 )}

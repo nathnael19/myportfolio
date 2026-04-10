@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-cyan-500">.</span>
             </div>
             <p className="text-gray-500 dark:text-gray-400 font-medium text-center md:text-left max-w-xs">
-              Crafting premium digital experiences through code and design.
+              Building things for the web.
             </p>
           </div>
 

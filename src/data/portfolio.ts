@@ -10,7 +10,7 @@ export const portfolioData = {
       "Open Source Contributor",
     ],
     about:
-      "I'm a passionate software engineer with a focus on creating beautiful, functional, and user-centered digital experiences. With a strong foundation in both front-end and back-end development, I love bringing ideas to life through code.",
+      "I'm a software engineer who loves building things that are simple to use and look great. I enjoy taking ideas from paper to code and making sure they work perfectly for the people using them.",
     email: "nathnaelnigussie19@gmail.com",
     socials: {
       github: "https://github.com/nathnael19",
@@ -66,7 +66,7 @@ export const portfolioData = {
       role: "Senior Frontend Engineer",
       period: "2021 - Present",
       description:
-        "Led the front-end team in rebuilding the core SaaS platform, improving performance by 40% and implementing a new design system.",
+        "Took the lead on a complete frontend overhaul of our main platform, making it much faster and easier to use for everyone.",
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ export const portfolioData = {
       role: "Full Stack Developer",
       period: "2018 - 2021",
       description:
-        "Developed and maintained multiple client websites and web applications using React, Node.js, and AWS.",
+        "Built and managed several web apps for different clients, ensuring they stayed reliable and high-performing as they grew.",
     },
     {
       id: 3,
@@ -82,7 +82,7 @@ export const portfolioData = {
       role: "Junior Web Developer",
       period: "2016 - 2018",
       description:
-        "Assisted in the development of MVPs for various startups, focusing on responsive UI and API integrations.",
+        "Helped startups launch their first products by building clean, responsive interfaces and connecting them to the backend.",
     },
   ],
   projects: [
@@ -90,7 +90,7 @@ export const portfolioData = {
       id: 1,
       title: "GoalUp Admin",
       description:
-        "A comprehensive admin dashboard for managing products, users, and orders in the GoalUp ecosystem. Features real-time inventory tracking, role-based access control, analytics insights, and seamless integration with the backend API.",
+        "A powerful dashboard I built to help manage everything—products, users, and orders—in one clean interface.",
       image: "/goalupadmin.png",
       tech: ["React", "Next.js", "TypeScript", "Tailwind", "Supabase"],
       github: "https://github.com/nathnael19/goalup_admin",
@@ -100,7 +100,7 @@ export const portfolioData = {
       id: 2,
       title: "GoalUp Backend",
       description:
-        "A scalable RESTful API built with FastAPI powering the GoalUp platform. Handles authentication (JWT), user management, product operations, and business logic using PostgreSQL and SQLModel.",
+        "A scalable API powering the GoalUp platform, handling everything from user authentication to complex business logic.",
       image: "/goalupbackend.png",
       tech: ["FastAPI", "Postgresql", "SQLModel", "JWT"],
       github: "https://github.com/nathnael19/goalup_backend",
@@ -110,7 +110,7 @@ export const portfolioData = {
       id: 3,
       title: "GoalUp Mobile APP",
       description:
-        "A cross-platform Flutter mobile application connected to the GoalUp backend. Enables users to browse products, manage their accounts, and interact with real-time data through a clean and responsive UI.",
+        "A mobile app designed for a seamless user experience, allowing people to browse and manage their accounts on the go.",
       image: "https://picsum.photos/seed/ai/800/600",
       tech: ["Flutter", "Dart", "FastAPI", "REST API"],
       github: "https://github.com/nathnael19/goalup_frontend",
@@ -120,7 +120,7 @@ export const portfolioData = {
       id: 4,
       title: "Expense Tracker",
       description:
-        "A personal finance tracking app built with Flutter. Supports offline-first data storage using Hive, expense categorization, analytics summaries, and a simple yet effective dashboard for monitoring spending habits.",
+        "A personal finance app that helps you keep track of your spending habits with simple analytics and offline support.",
       image: "/expensetracker.jpg",
       tech: ["Flutter", "Hive", "Dart", "Firebase"],
       github: "https://github.com/nathnael19/expense-tracker",
@@ -130,7 +130,7 @@ export const portfolioData = {
       id: 5,
       title: "FM Radio",
       description:
-        "A feature-rich FM radio streaming app with background playback support. Includes live radio streaming, podcast playback, news integration, and API-based weather and currency updates.",
+        "A full-featured radio app that lets you stream live stations and podcasts, even in the background.",
       image: "/fmradio.png",
       tech: ["Flutter", "Dart", "Firebase", "AudioPlayers"],
       github: "https://github.com/nathnael19/fm_radio",
@@ -150,7 +150,7 @@ export const portfolioData = {
       id: 7,
       title: "Mezmur Debter",
       description:
-        "A digital hymn book application designed for choir members. Supports offline access using Hive, song categorization, search functionality, favorites, and structured content display from Firebase.",
+        "A digital songbook app for choir members that works offline, making it easy to find and organize hymns.",
       image: "/mezmurdebter.jpg",
       tech: ["Flutter", "Hive", "Dart", "Firebase"],
       github: "https://github.com/nathnael19/ruhama_choir_mezmur_debter",
@@ -160,7 +160,7 @@ export const portfolioData = {
       id: 8,
       title: "Arif Menu",
       description:
-        "A modern digital restaurant menu platform built with Next.js and TypeScript. Features dynamic menu rendering, responsive UI design with Tailwind CSS, and structured content management for restaurants.",
+        "A modern, responsive menu platform built to help restaurants showcase their offerings in a clean and simple way.",
       image: "/arifmenu.png",
       tech: ["Next.js", "TypeScript", "Tailwind"],
       github: "https://github.com/nathnael19/ArifMenu",
@@ -170,7 +170,7 @@ export const portfolioData = {
       id: 9,
       title: "SmartJob Backend",
       description:
-        "An intelligent recruitment backend system that automates early-stage candidate screening. Built with FastAPI and PostgreSQL, featuring resume processing, scoring logic, and secure JWT authentication.",
+        "An intelligent system that automates the initial stages of candidate screening to save time and effort during hiring.",
       image: "https://picsum.photos/seed/backend/800/600",
       tech: ["FastAPI", "Postgresql", "SQLModel", "JWT"],
       github: "https://github.com/ASTU-group/smartjob_backend",
@@ -180,11 +180,21 @@ export const portfolioData = {
       id: 10,
       title: "SmartJob Frontend",
       description:
-        "A responsive web interface for managing job applications and candidate evaluations. Built with Next.js and TypeScript, integrating seamlessly with the SmartJob backend API for real-time updates.",
+        "A clean web interface for managing job applications and evaluating candidates in real-time.",
       image: "/smartjobfrontend.png",
       tech: ["Next.js", "TypeScript", "Tailwind"],
       github: "https://github.com/ASTU-group/smartjob_frontend",
       live: "https://smartjob.webcode.codes",
+    },
+    {
+      id: 11,
+      title: "simple_audio_player",
+      description:
+        "a flutter package for playing audio files in a simple and efficient way.",
+      image: "/smartjobfrontend.png",
+      tech: ["Flutter", "Dart", "AudioPlayers"],
+      github: "https://github.com/nathnael19/simple_audio_player",
+      live: "https://example.com",
     },
   ],
 };

@@ -17,12 +17,12 @@ export default function About() {
             <div className="relative z-10 space-y-8">
               <div className="space-y-4">
                 <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500">
-                  Discovery
+                  A bit about me
                 </h2>
                 <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
-                  Crafting Digital Experiences with{" "}
+                  Building software that works for{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-                    Precision
+                    people
                   </span>
                 </h3>
               </div>
@@ -64,20 +64,20 @@ export default function About() {
           >
             {[
               {
-                title: "Frontend Architecture",
-                desc: "Creating pixel-perfect, accessible, and performant user interfaces using React and the modern web ecosystem.",
+                title: "Frontend Development",
+                desc: "Building clean, fast interfaces that look and feel right on every screen.",
                 icon: Code2,
                 color: "cyan"
               },
               {
-                title: "Scalable Systems",
-                desc: "Designing robust backend structures and distributed systems that power modern digital experiences.",
+                title: "Backend Development",
+                desc: "Designing reliable backends that power everything under the hood.",
                 icon: Terminal,
                 color: "blue"
               },
               {
-                title: "Product Strategy",
-                desc: "Merging technical excellence with business goals to build products that deliver real-world impact.",
+                title: "Strategy",
+                desc: "Combining technical skill with user needs to build products that make an impact.",
                 icon: Cpu,
                 color: "indigo"
               }

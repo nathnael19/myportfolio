@@ -40,7 +40,7 @@ export default function Projects() {
           className="flex flex-col gap-4 mb-20 items-center text-center"
         >
           <h2 className="text-sm uppercase tracking-[0.3em] font-black text-cyan-500 mb-2">
-            Showcase
+            Recent Work
           </h2>
           <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
             Featured{" "}
@@ -149,7 +149,7 @@ export default function Projects() {
                       rel="noreferrer"
                       className="group/btn inline-flex items-center gap-2 text-sm font-black uppercase tracking-widest text-cyan-500 hover:text-cyan-400 transition-all"
                     >
-                      View Project
+                      Check it out
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform" />
                     </a>
                   </div>
@@ -176,7 +176,7 @@ export default function Projects() {
               }}
               className="group relative inline-flex items-center gap-3 px-10 py-5 rounded-[2rem] glass-card text-gray-900 dark:text-white font-black uppercase tracking-widest text-xs hover:bg-cyan-500 hover:text-white hover:border-cyan-500 dark:hover:bg-cyan-500 dark:hover:border-cyan-500 transition-all duration-500 shadow-2xl"
             >
-              {showAll ? "Show Less" : "Explore More"}
+              {showAll ? "Show less" : "View more projects"}
               <motion.div
                 animate={{ rotate: showAll ? 180 : 0 }}
                 transition={{ duration: 0.5 }}
